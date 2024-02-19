@@ -1,0 +1,56 @@
+
+
+
+# config/routes.yaml
+home:
+    path: /home
+    controller: App\Controller\DefaultController::index
+
+    # config/routes.yaml
+recla:
+    path: /recla
+    controller: App\Controller\DefaultController::recla
+
+        # config/routes.yaml
+activ:
+    path: /activ
+    controller: App\Controller\DefaultController::activ
+
+        # config/routes.yaml
+comma:
+    path: /comma
+    controller: App\Controller\DefaultController::comma
+
+            # config/routes.yaml
+etab:
+    path: /etab
+    controller: App\Controller\DefaultController::etab
+
+    
+            # config/routes.yaml
+prod:
+    path: /prod
+    controller: App\Controller\DefaultController::prod
+
+    
+            # config/routes.yaml
+reser:
+    path: /reser
+    controller: App\Controller\DefaultController::reser
+
+    
+            # config/routes.yaml
+admin:
+    path: /admin
+    controller: App\Controller\DefaultController::admin
+
+    
+            # config/routes.yaml
+profi:
+    path: /profi
+    controller: App\Controller\DefaultController::profi
+
+
+
+
+
