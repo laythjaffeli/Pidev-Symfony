@@ -5,32 +5,34 @@
         <title>{% block title %}Experience Tunisia{% endblock %}</title>
         <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/197/197624.png" type="image/png">
         {% block stylesheets %}
-        <link rel="stylesheet" href="css/bootstrap.css">
-        <link rel="stylesheet" href="vendors/linericon/style.css">
-        <link rel="stylesheet" href="css/font-awesome.min.css">
-        <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-        <link rel="stylesheet" href="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.css">
-        <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-        <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendors/linericon/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendors/owl-carousel/owl.carousel.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendors/nice-select/css/nice-select.css') }}">
+        <link rel="stylesheet" href="{{ asset('vendors/owl-carousel/owl.carousel.min.css') }}">
+
         <!-- main css -->
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/responsive.css') }}">
+
         {% endblock %}
 
         {% block javascripts %}
 
-<script src="js/jquery-3.2.1.min.js"></script>
-        <script src="js/popper.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
-        <script src="js/jquery.ajaxchimp.min.js"></script>
-        <script src="js/mail-script.js"></script>
-        <script src="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js"></script>
-        <script src="vendors/nice-select/js/jquery.nice-select.js"></script>
-        <script src="js/mail-script.js"></script>
-        <script src="js/stellar.js"></script>
-        <script src="vendors/lightbox/simpleLightbox.min.js"></script>
-        <script src="js/custom.js"></script>
+<script src="{{ asset('js/jquery-3.2.1.min.js') }}"></script>
+<script src="{{ asset('js/popper.js') }}"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('vendors/owl-carousel/owl.carousel.min.js') }}"></script>
+<script src="{{ asset('js/jquery.ajaxchimp.min.js') }}"></script>
+<script src="{{ asset('js/mail-script.js') }}"></script>
+<script src="{{ asset('vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js') }}"></script>
+<script src="{{ asset('vendors/nice-select/js/jquery.nice-select.js') }}"></script>
+<script src="{{ asset('js/stellar.js') }}"></script>
+<script src="{{ asset('vendors/lightbox/simpleLightbox.min.js') }}"></script>
+<script src="{{ asset('js/custom.js') }}"></script>
+
 
         {% endblock %}
     </head>
@@ -73,7 +75,17 @@
                                 </ul>
                             </li> 
                             <li class="nav-item"><a class="nav-link" href="/recla">Réclamations</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/profi">Mon profil</a></li>
+                            {% if app.user %}
+                            <li class="nav-item submenu dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ app.user.prenom ~ ' ' ~ app.user.nom }}</a>
+                                <ul class="dropdown-menu">
+                                
+                        {% endif %}
+                                    <li class="nav-item"><a class="nav-link" href="#">Profile</a></li>
+                                    <li class="nav-item"><a class="nav-link" href="#">Se deconecter</a></li>
+                                </ul>
+                            </li> 
+
                         </ul>
                     </div> 
                 </nav>

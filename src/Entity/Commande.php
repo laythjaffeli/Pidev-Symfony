@@ -32,7 +32,7 @@ class Commande
     private Collection $produits;
 
     #[ORM\ManyToOne(inversedBy: 'Commande')]
-    private ?Utilisateur $utilisateur = null;
+    private ?User $user = null;
 
     public function __construct()
     {
@@ -119,14 +119,14 @@ class Commande
         return $this;
     }
 
-    public function getUtilisateur(): ?Utilisateur
+    public function getUser(): ?User
     {
-        return $this->utilisateur;
+        return $this->user;
     }
 
-    public function setUtilisateur(?Utilisateur $utilisateur): static
+    public function setUser(?User $user): static
     {
-        $this->utilisateur = $utilisateur;
+        $this->user = $user;
 
         return $this;
     }

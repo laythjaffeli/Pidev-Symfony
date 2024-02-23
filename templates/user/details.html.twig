@@ -1,0 +1,66 @@
+{% extends 'admin.html.twig' %}
+
+{% block title %}Détails utilisateur{% endblock %}
+
+{% block body %}
+ <div
+                            class="relative hidden w-8 h-8 mr-3 rounded-full md:block"
+                          >
+   
+                            </div>
+
+    <table class="w-full whitespace-no-wrap">
+        <tbody>
+            
+           <tr
+                      class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+            
+                <th class="px-4 py-3">Cin</th>
+                <td>{{ user.cin }}</td>
+            </tr>
+            <tr
+                      class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+            
+                <th class="px-4 py-3">Nom</th>
+                <td>{{ user.nom }}</td>
+            </tr>
+            <tr
+                      class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+            
+                <th class="px-4 py-3">Prenom</th>
+                <td>{{ user.prenom }}</td>
+            </tr>
+            
+            <tr
+                      class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+            
+                <th class="px-4 py-3">Email</th>
+                <td>{{ user.email }}</td>
+            </tr>
+            <tr
+                      class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+            
+                <th class="px-4 py-3">Adresse</th>
+                <td>{{ user.adresse }}</td>
+            </tr>
+            <tr
+                      class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+            
+                <th class="px-4 py-3">Numero de telephone</th>
+                <td>{{ user.numtel }}</td>
+            </tr>
+            <tr
+                      class="text-xs font-semibold tracking-wide text-left text-gray-500 uppercase border-b dark:border-gray-700 bg-gray-50 dark:text-gray-400 dark:bg-gray-800">
+            
+                <th class="px-4 py-3">Roles</th>
+                <td>{{ user.role}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <div>
+    <a href="{{ path('app_user_index') }}" class="px-4 py-2 text-sm font-medium  text-white transition-colors duration-150 bg-purple-600 border border-transparent rounded-lg active:bg-purple-600 hover:bg-purple-700 focus:outline-none focus:shadow-outline-purple">
+  Retour à la liste
+    <a/>
+    <div>
+{% endblock %}

@@ -43,7 +43,7 @@ class Offre
     private ?Activite $Activite = null;
 
     #[ORM\ManyToOne(inversedBy: 'Offre')]
-    private ?Utilisateur $utilisateur = null;
+    private ?User $user = null;
 
 
 
@@ -159,14 +159,14 @@ class Offre
         return $this;
     }
 
-    public function getUtilisateur(): ?Utilisateur
+    public function getUser(): ?User
     {
-        return $this->utilisateur;
+        return $this->user;
     }
 
-    public function setUtilisateur(?Utilisateur $utilisateur): static
+    public function setUser(?User $user): static
     {
-        $this->utilisateur = $utilisateur;
+        $this->user = $user;
 
         return $this;
     }

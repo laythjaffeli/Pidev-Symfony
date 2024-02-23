@@ -28,7 +28,7 @@ class Produit
     private Collection $Offre;
 
     #[ORM\ManyToOne(inversedBy: 'Produit')]
-    private ?Utilisateur $utilisateur = null;
+    private ?User $user = null;
 
     public function __construct()
     {
@@ -119,14 +119,14 @@ class Produit
         return $this;
     }
 
-    public function getUtilisateur(): ?Utilisateur
+    public function getUser(): ?User
     {
-        return $this->utilisateur;
+        return $this->user;
     }
 
-    public function setUtilisateur(?Utilisateur $utilisateur): static
+    public function setUser(?User $user): static
     {
-        $this->utilisateur = $utilisateur;
+        $this->user = $user;
 
         return $this;
     }
